@@ -1,12 +1,13 @@
-# UserSpice5
- +UserSpice 5 is a tool for quickly developing PHP applications. 
- +
- +Ideally the git repository is for tracking changes.  All downloads should probably go through UserSpice.com where they are properly packaged for installtion.
- +
- +What makes UserSpice different from almost any other PHP User Management Framework is that it has been designed from the beginning to get out of your way so you can spend your time working on your project. Other systems may force you to use their rewriting rules, template engines, frameworks, etc. UserSpice doesn't. You can use as much of it or as little as you choose. It just sits there and does its job.
- +
- +In most cases, UserSpice can control access to your existing pages with a single line of code. From there, we provide an incredible set of PHP Classes and Functions that you can choose to use or not use. Don't like the look? It's built using Bootstrap. You can change the look and feel of your site in seconds with a new css file and some well-documented tweaks.
- +
- +Most importantly, UserSpice is constantly in development. It's constantly getting better and more secure while maintaining the goal of getting out of the way. As additional major features are added, they will be in the form of plugins to keep things modular.
- +
- +So you can get on with the business of designing your project. All while being Bootstrap compatible so you can easily change the look and feel of your project. The goal of UserSpice is to strike a balance of being feature-rich without being bloated.
+Welcome to the College Baseball Sim repository. 
+
+College Baseball Sim is a text based baseball game where Users take control and coach up their college teams to the College World Series. Users will scout, recruit, train, set lineups and strategize with their teams.
+
+This project is written with a PHP and MySQL backend. The front end uses HTML/CSS with JavaScript, JQuery, and Ajax for functionality.
+
+This repo is only for the front-end of the website. I use UserSpice for user management.
+
+If you require any back end scripts, you will need to contact me for the relevent files.
+
+For setup and development you will need a WAMP/LAMP server to run apache and php. In your PHPMyAdmin, you will need to upload the two database files located in the Database directory. the CBS_Main database is for user and website data, whereas CBS is game based data.
+
+If you have any questions feel free to contact me.
