@@ -1,6 +1,6 @@
 <?php
 
-if (!isset($_GET['View'])){ // No Page Selected
+if (!isset($_GET['View'])){ // No Page Selected, Index is the default
 
     $MenuType = "Main";
     $ThirdMenu = "None";
@@ -12,59 +12,108 @@ if (!isset($_GET['View'])){ // No Page Selected
         $Include = "Main/Index-User.php";
     }
 
-} else {
+} else { // View is set
 
-    $Page = $_GET['View'];
+    $Page = $_GET['View']; // Page name
 
     switch ($Page){
 
-        case "CreateCoach":
-            $Title = "College Baseball Sim: Home";
+        case "GameGuide":
+            $Title = "College Baseball Sim: Game Guide";
             $ThirdMenu = 0;
-            $Include = "Main/CreateManager.php";
+            $Include = "Main/GameGuide.php";
+            echo "<script type='text/javascript' src='JS/Global.js'></script>";
+            break;
+
+        case "Store":
+            $Title = "College Baseball Sim: Store";
+            $ThirdMenu = 0;
+            $Include = "Main/Store.php";
+            echo "<script type='text/javascript' src='JS/Global.js'></script>";
+            break;
+
+        case "NewsArchive":
+            $Title = "College Baseball Sim: News Archive";
+            $ThirdMenu = 0;
+            $Include = "Main/Archive.php";
+            echo "<script type='text/javascript' src='JS/Global.js'></script>";
+            break;
+
+        case "WriteArticle":
+            $Title = "College Baseball Sim: Article Creator";
+            $ThirdMenu = 0;
+            $Include = "Main/WriteArticle.php";
             echo "<script type='text/javascript' src='JS/Global.js'></script>";
             break;
 
         case "CreateCoach":
             $Title = "College Baseball Sim: Create a Coach";
             $ThirdMenu = 0;
-            $Include = "Main/CreateManager.php";
+            $Include = "Coach/Create.php";
             echo "<script type='text/javascript' src='JS/Global.js'></script>";
             break;
 
         case "MyCoaches":
             $Title = "College Baseball Sim: My Coaches";
             $ThirdMenu = 0;
-            $Include = "Main/MyManagers.php";
+            $Include = "Coach/View.php";
+            echo "<script type='text/javascript' src='JS/Global.js'></script>";
+            break;
+
+        case "CoachProfile":
+            $Title = "College Baseball Sim: Coach Profile";
+            $ThirdMenu = 0;
+            $Include = "Coach/Profile.php";
+            echo "<script type='text/javascript' src='JS/Global.js'></script>";
+            break;
+
+        case "Inbox":
+            $Title = "College Baseball Sim: Coach Inbox";
+            $ThirdMenu = 0;
+            $Include = "Coach/Inbox.php";
+            echo "<script type='text/javascript' src='JS/Global.js'></script>";
+            break;
+
+        case "LeaveTeam":
+            $Title = "College Baseball Sim: Leave Team";
+            $ThirdMenu = 0;
+            $Include = "Coach/Leave.php";
+            echo "<script type='text/javascript' src='JS/Global.js'></script>";
+            break;
+
+        case "Retire":
+            $Title = "College Baseball Sim: Coach Retirement";
+            $ThirdMenu = 0;
+            $Include = "Coach/Retire.php";
             echo "<script type='text/javascript' src='JS/Global.js'></script>";
             break;
 
         case "FindTeam":
-        case "ContractOffers":
+        case "Contract":
             $Title = "College Baseball Simulation: Contract Offers";
             $ThirdMenu = 0;
-            $Include = "Manager/Offers.php";
+            $Include = "Coach/Contracts.php";
             echo "<script type='text/javascript' src='JS/Manager.js'></script>";
             break;
 
         case "Roster":
             $Title = "College Baseball Simulation: Roster Management";
             $ThirdMenu = 1;
-            $Include = "Manager/MyRoster.php";
+            $Include = "Management/MyRoster.php";
             echo "<script type='text/javascript' src='JS/Manager.js'></script>";
             break;
 
         case "RosterPitchers":
             $Title = "College Baseball Simulation: Roster Management";
             $ThirdMenu = 1;
-            $Include = "Manager/MyRosterPitchers.php";
+            $Include = "Management/MyRosterPitchers.php";
             echo "<script type='text/javascript' src='JS/Manager.js'></script>";
             break;
 
         case "RosterWalkons":
             $Title = "College Baseball Simulation: Roster Management";
             $ThirdMenu = 1;
-            $Include = "Manager/Walkons.php";
+            $Include = "Management/Walkons.php";
             echo "<script type='text/javascript' src='JS/Manager.js'></script>";
             break;
 

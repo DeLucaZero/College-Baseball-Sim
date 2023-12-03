@@ -231,19 +231,19 @@ require_once 'Global/Global.php';
                             </div>
                         </a>
 
-                        <a href="index.php">
+                        <a href="index.php?View=GameGuide">
                             <div class="MenuItem">
                                 Game Guide
                             </div>
                         </a>
 
-                        <a href="index.php">
+                        <a href="index.php?View=Store">
                             <div class="MenuItem">
                                 Store
                             </div>
                         </a>
 
-                        <a href="index.php">
+                        <a href="index.php?View=NewsArchive">
                             <div class="MenuItem">
                                 News Archive
                             </div>
@@ -255,7 +255,7 @@ require_once 'Global/Global.php';
 
                             ?>
 
-                            <a href="index.php">
+                            <a href="index.php?View=WriteArticle">
                                 <div class="MenuItem">
                                     Create Article
                                 </div>
