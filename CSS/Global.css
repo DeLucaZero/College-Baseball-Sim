@@ -1,0 +1,407 @@
+a:link {
+    color: #FFF;
+    text-decoration: none;
+
+}
+
+a:visited {
+    color: #FFF;
+    text-decoration: none;
+}
+a:hover {
+    color: #F00;
+    text-decoration: none;
+}
+a:active {
+    color: #F00;
+    text-decoration: underline;
+}
+
+html {
+    height: 100%;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    min-height: 100%;
+    width: 100%;
+    background-color: #000;
+    top:0;
+    left:0;
+    color:#FFF;
+    background-image: url('Media/NoiseAlt.png');
+    background-repeat: repeat;
+}
+
+table{
+    text-align: center;
+    font-size: 14px;
+    border-collapse:separate;
+    border-spacing: 0 1px;
+    vertical-align: middle;
+
+}
+
+table th{
+    background: #000;
+    text-shadow: 1px 1px 1px #000;
+    color: #FFF;
+    text-decoration: underline;
+    vertical-align: middle;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 999;
+    padding: 5px 5px 8px 5px;
+    font-size: 12px;
+}
+
+table tr{
+    color: #FFF;
+    vertical-align: middle;
+    display: table-row;
+
+
+}
+
+table td{
+    vertical-align: middle;
+    display: table-cell;
+    height: 17px;
+    line-height: 17px;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 5px 0 5px 0;
+}
+
+.Noise{
+    background-color: #000;
+    background-image: url('Media/Noise.png');
+    background-repeat: repeat;
+}
+
+.NoiseAlt{
+    background-color: #000;
+    background-image: url('Media/NoiseAlt.png');
+    background-repeat: repeat;
+}
+
+.NoiseRed{
+    background-image: url('Media/NoiseRed.png');
+    background-repeat: repeat;
+}
+
+.MenuItem{
+    display: inline-block;
+    padding: 0 15px 0 15px;
+    cursor: pointer;
+}
+
+.Btn{
+    background: #1c1c1c;
+    border: 1px solid #3b3b3b;
+    border-radius: 5px;
+    height: 30px;
+    display: inline-block;
+    line-height: 25px;
+    padding: 0 12px 0 12px;
+}
+
+.BtnText{
+    font-weight: bolder;
+    font-size: 14px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.BtnSmall{
+    background: #1c1c1c;
+    border: 1px solid #3b3b3b;
+    border-radius: 5px;
+    height: 22px;
+    display: inline-block;
+    line-height: 17px;
+    padding: 0 10px 0 10px;
+}
+
+.BtnTextSmall{
+    font-weight: bolder;
+    font-size: 11px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.NoClickBtn{
+    background: #828282;
+    border: 1px solid #5c5c5c;
+    border-radius: 5px;
+    height: 30px;
+    display: inline-block;
+    line-height: 25px;
+    padding: 0 12px 0 12px;
+    color: #FFF;
+}
+
+.NoClickBtnSm{
+    background: #828282;
+    border: 1px solid #5c5c5c;
+    border-radius: 5px;
+    height: 22px;
+    display: inline-block;
+    line-height: 17px;
+    padding: 0 10px 0 10px;
+    color: #FFF;
+    text-align: center;
+}
+
+.TeamSmTxt{
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.TeamLgTxt{
+    font-weight: bold;
+    font-size: 17px;
+    display: inline-block;
+}
+
+.TeamScheduleSm{
+    font-weight: bold;
+    font-size: 11px;
+    text-shadow: 1px 1px 5px #000;
+    text-align: left;
+}
+
+.TeamScheduleSmC{
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: 1px 1px 5px #000;
+    text-align: center;
+}
+
+.TeamScheduleSmaller{
+    font-weight: bold;
+    font-size: 10px;
+    text-shadow: 1px 1px 5px #000;
+    text-align: left;
+    display: inline-block;
+}
+
+.bracket {
+    display: flex;
+    justify-content: center;
+}
+
+.round {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.matchup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    font-weight: bold;
+}
+
+.team span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90px;
+}
+
+.connector {
+    width: 50px;
+    height: 100px;
+    border: 1px solid #dee2e6;
+    border-left: none;
+    border-right: none;
+}
+
+.connector:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.StarOrder{
+    display: none;
+}
+
+.TeamRosterTitle{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+    width: 150px;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.TeamRoster{
+    max-width: 700px;
+    height: 75vh;
+    overflow-y: auto;
+    margin: 0 auto 0 auto;
+}
+
+.TeamRosterRow{
+    max-width: 675px;
+}
+
+.SecMenuItem{
+    padding: 0 15px 0 15px;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.BorderRight{
+    border-right: 1px solid #FFF;
+}
+
+.Banner{
+    display: inline-block;
+    height: 150px;
+    width: 98px;
+    position: relative;
+    margin: 0 20px 10px 0;
+}
+
+.MgrBanner{
+    display: inline-block;
+    height: 150px;
+    width: 98px;
+    position: relative;
+    margin: 0 5px 5px 0;
+}
+
+.BannerImg{
+    position: absolute;
+    height: 150px;
+    width: 98px;
+}
+
+.BannerSsn{
+    position: absolute;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    width: 98px;
+    text-shadow: 1px 1px 5px #000;
+    margin-top: 5px;
+    height: 15px;
+    z-index: 2;
+}
+
+.BannerLogo{
+    position: absolute;
+    float: left;
+    height: 50px;
+    width: 98px;
+    text-shadow: 1px 1px 5px #000;
+    margin-top: 30px;
+    z-index: 2;
+}
+
+.BannerAward{
+    position: absolute;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    width: 98px;
+    text-shadow: 1px 1px 5px #000;
+    margin-top: 90px;
+    height: 15px;
+    z-index: 2;
+}
+
+.TeamArticle{
+    margin: 0 0 10px 0;
+    width: 95%;
+    border-radius: 3px;
+}
+
+.TeamArticleHeadline{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 5px #000;
+    margin: 5px 0 5px 0;
+}
+
+.TeamArticleAuthor{
+    float: left;
+    margin: 5px 0 5px 10px;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: left;
+    width: 40%;
+}
+
+.TeamArticleDate{
+    float: Right;
+    margin: 5px 10px 5px 0;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: right;
+    width: 40%;
+}
+
+.TeamArticleText{
+    float: left;
+    padding: 0 10px 0 10px;
+    margin: 10px 0 5px 0;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.TeamNewsNewArticles{
+    padding: 0;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.TargetBoxRow{
+    height: 20px;
+    line-height: 20px;
+}
+
+.TargetBoxRowAlt{
+    margin: 10px 0 0 0;
+}
+
+.ScoreSmall{
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 1px 1px 5px #000;
+    text-align: left;
+    display: inline-block;
+}
+
+.ScoreSmaller{
+    font-weight: bold;
+    font-size: 10px;
+    text-shadow: 1px 1px 5px #000;
+    text-align: left;
+    display: inline-block;
+}
