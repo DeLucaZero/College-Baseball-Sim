@@ -8,6 +8,8 @@ This repo is only for the front-end of the website. I use UserSpice for user man
 
 If you require any back end scripts, you will need to contact me for the relevent files.
 
-For setup and development you will need a WAMP/LAMP server to run apache and php. In your PHPMyAdmin, you will need to upload the two database files located in the Database directory. the CBS_Main database is for user and website data, whereas CBS is game based data.
+For setup and development you will need a WAMP/LAMP server to run apache and php. There is no API as it is not needed since you will have the database setup.
+
+In your PHPMyAdmin, you will need to upload the two database files located in the Database directory. the CBS_Main database is for user and website data, whereas CBS is game based data.
 
 If you have any questions feel free to contact me.
