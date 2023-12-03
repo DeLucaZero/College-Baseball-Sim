@@ -178,7 +178,7 @@ if (!isset($_GET['View'])){ // No Page Selected, Index is the default
         case "Recruiting":
             $Title = "College Baseball Sim: Recruiting Board";
             $ThirdMenu = 4;
-            $Include = "Recruit/Targets.php";
+            $Include = "Management/Targets.php";
             echo "<script type='text/javascript' src='JS/Recruit.js'></script>";
             break;
 

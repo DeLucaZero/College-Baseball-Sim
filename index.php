@@ -367,7 +367,7 @@ require_once 'Global/Global.php';
                             </div>
                         </a>
 
-                        <a href="index.php?View=CreateCoach">
+                        <a href="index.php?View=Inbox">
                             <div class="MenuItem">
                                 Inbox
                             </div>
@@ -385,7 +385,7 @@ require_once 'Global/Global.php';
                             </div>
                         </a>
 
-                        <a href="index.php?View=CreateCoach">
+                        <a href="index.php?View=Scout">
                             <div class="MenuItem">
                                 Scouting
                             </div>
@@ -397,19 +397,19 @@ require_once 'Global/Global.php';
                             </div>
                         </a>
 
-                        <a href="index.php?View=CreateCoach">
+                        <a href="index.php?View=Strategy">
                             <div class="MenuItem">
                                 Strategy
                             </div>
                         </a>
 
-                        <a href="index.php?View=CreateCoach">
+                        <a href="index.php?View=Training">
                             <div class="MenuItem">
                                 Training
                             </div>
                         </a>
 
-                        <a href="index.php?View=Tournament">
+                        <a href="index.php?View=Scheduler">
                             <div class="MenuItem">
                                 Custom Scheduler
                             </div>
@@ -420,13 +420,13 @@ require_once 'Global/Global.php';
                     <!-- College Menu Dropdown -->
                     <div class="col-xl-12 col-lg-12 col-md-12 SecondMenu" id="College" style="display: none;">
 
-                        <a href="index.php?View=CreateCoach">
+                        <a href="index.php?View=CollegeCentral">
                             <div class="MenuItem">
                                 College Central
                             </div>
                         </a>
 
-                        <a href="index.php?View=CreateCoach">
+                        <a href="index.php?View=TopRecruits">
                             <div class="MenuItem">
                                 Top Recruits
                             </div>
@@ -450,19 +450,19 @@ require_once 'Global/Global.php';
                             </div>
                         </a>
 
-                        <a href="index.php?View=CreateCoach">
+                        <a href="index.php?View=ConfTourneys">
                             <div class="MenuItem">
                                 Conf Tournaments
                             </div>
                         </a>
 
-                        <a href="index.php?View=Tournament">
+                        <a href="index.php?View=CWS">
                             <div class="MenuItem">
                                 College World Series
                             </div>
                         </a>
 
-                        <a href="index.php?View=CreateCoach">
+                        <a href="index.php?View=CollegeHistory">
                             <div class="MenuItem">
                                 History
                             </div>
