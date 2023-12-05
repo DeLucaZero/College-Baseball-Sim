@@ -8,8 +8,8 @@ if ($Access >= 1){ // User, logged in
     // Selected Options
     $Day = $_GET['Day'] ?? $Server['Day'];
     $Time = $_GET['Time'] ?? $Server['Game'];
-    $Conf = $_GET['Conf'] ?? "!=0";
-    $Rank = $_GET['Rank'] ?? "<=25";
+    $Conf = $_GET['Conf'] ?? 0;
+    $Rank = $_GET['Rank'] ?? 1;
 
     // Day Validation
     if ($Day > 18){
@@ -25,6 +25,19 @@ if ($Access >= 1){ // User, logged in
         $Time = 1;
     }
 
+    // Conf Validation and Query Prep
+    if ($Conf == 0){ // All Conferences
+        $Conf = "!=0";
+    } else { // Specific Conference
+        $Conf = "=$Conf";
+    }
+
+    // Rank Validation and Query Prep
+    if ($Rank == 1){ // Top 25
+        $Rank = "<=25";
+    } else { // All Games
+        $Rank = ">=0";
+    }
 
     ?>
 
@@ -90,13 +103,21 @@ if ($Access >= 1){ // User, logged in
 
                         <?php
 
-                        // Loop through Conferences
-                        for ($i = 1; $i <= 6; $i++) {
+                        // Option for All Conferences
+                        if ($Conf === "!=0"){ // Selected
+                            echo "<option value='0' selected='selected'>All</option>";
+                        } else {
+                            echo "<option value='0'>All</option>";
+                        }
 
-                            if ($Time == $i){ // Selected
-                                echo "<option value='$i' selected='selected'>Time Slot $i</option>";
+                        // Query to loop conferences
+                        $GetConf = $DB->query("SELECT ID, Abbr FROM conferences")->FetchAll();
+                        foreach ($GetConf as $Conference) {
+
+                            if ($Conf === "=$Conference[ID]"){ // Selected
+                                echo "<option value='$Conference[ID]' selected='selected'>$Conference[Abbr]</option>";
                             } else {
-                                echo "<option value='$i'>Time Slot $i</option>";
+                                echo "<option value='$Conference[ID]'>$Conference[Abbr]</option>";
                             }
 
                         }
@@ -114,29 +135,30 @@ if ($Access >= 1){ // User, logged in
 
                         <?php
 
-                        // Loop through Conferences
-                        for ($i = 1; $i <= 2; $i++) {
+                        // Two Options, Top 25 and All
+                        if ($Rank === "<=25"){ // Selected
+                            echo "<option value='1' selected='selected'>Top 25</option>";
+                        } else {
+                            echo "<option value='1'>Top 25</option>";
+                        }
 
-                            switch ($i) {
-                                case 1:
-                                    $Option = "Top 25";
-                                    break;
-                                case 2:
-                                    $Option = "Any";
-                                    break;
-                            }
-
-                            if ($Time == $i){ // Selected
-                                echo "<option value='$i' selected='selected'>$Option</option>";
-                            } else {
-                                echo "<option value='$i'>$Option</option>";
-                            }
-
+                        if ($Rank === ">=0"){ // Selected
+                            echo "<option value='1' selected='selected'>All</option>";
+                        } else {
+                            echo "<option value='1'>All</option>";
                         }
 
                         ?>
 
                     </select>
+
+                </div>
+
+                <div style="display: inline-block; padding: 10px;">
+
+                    <label for="none"></label><br>
+                    <!-- JS Function in College.JS is called on click to redirect back to View?Scores with GET values. -->
+                    <a href='#'><div class='Btn ViewScores'><div class='BtnText'>View</div></div></a>
 
                 </div>
 
@@ -150,6 +172,22 @@ if ($Access >= 1){ // User, logged in
     <div class="col-xl-12 col-lg-12 col-md-12" style="text-align: center; border-radius: 6px; margin:auto; font-weight: bold;">
 
         <div class="row mx-auto">
+
+            <?php
+
+            // Result Test
+            #echo "<br>Day: $Day, Time: $Time, Conf: $Conf, Rank: $Rank";
+
+            // Show selected games
+            $G = $DB->Query("SELECT * FROM games WHERE Day='$Day' AND Time='$Time' AND Rank $Rank AND HomeConf $Conf OR  Day='$Day' AND Time='$Time' AND Rank $Rank AND AwayConf $Conf ORDER BY Rank")->FetchAll();
+            foreach ($G as $G){
+
+                // Shows a single game, located in Global/Functions.php
+                ShowGame($DB, $G);
+
+            }
+
+            ?>
 
         </div>
 

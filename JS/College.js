@@ -12,13 +12,12 @@ $(function(){
 $(function(){
     $(document).on("click",".ViewScores",function(){
 
-        var ServerID = $('select#Server').val();
-        var Season = $('select#Season').val();
-        var Day = $('select#Day').val();
-        var Time = $('select#Time').val();
-        var Conference = $('select#Conference').val();
+        var Day = $('select#GameDay').val();
+        var Time = $('select#GameTime').val();
+        var Conference = $('select#GameConf').val();
+        var Rank = $('select#GameRank').val();
 
-        window.location.href = "index.php?Page=Scores&ServerID="+ServerID+"&Season="+Season+"&Day="+Day+"&Time="+Time+"&Conference="+Conference;
+        window.location.href = "index.php?View=Scores&Day="+Day+"&Time="+Time+"&Conf="+Conference+"&Rank="+Rank;
 
     });
 });
@@ -30,7 +29,7 @@ $(function(){
         var Season = $('select#Season').val();
         var ID = $('select#Conf').val();
 
-        window.location.href = "index.php?Page=ConfTourney&ServerID="+ServerID+"&Season="+Season+"&ID="+ID;
+        window.location.href = "index.php?View=ConfTourney&ServerID="+ServerID+"&Season="+Season+"&ID="+ID;
 
     });
 });
